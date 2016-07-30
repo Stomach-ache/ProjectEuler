@@ -40,13 +40,8 @@ void init() {
 
 int main(void) {
     init();
-    int T;
-    scanf("%d", &T);
-    while (T-- > 0) {
-        LL N;
-        scanf("%lld", &N);
-        printf("%d\n", p[N]);
-    }
+    LL N = 10001;
+    printf("%d\n", p[N]);
 
     return 0;
 }

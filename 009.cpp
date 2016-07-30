@@ -26,23 +26,18 @@ const double PI = 2 * acos(0);
 const double eps = 1e-9;
 
 int main(void) {
-    int T;
-    cin >> T;
-    while (T-- > 0) {
-        int N;
-        cin >> N;
+    int N = 1000;
 
-        int ans = -1;
-        for (int a = 1; a < N; ++a) {
-            int b = 0, c = 0;
-            if (((N-a)*(N-a)-a*a) % (2*(N-a)) == 0) {
-                b = ((N-a)*(N-a)-a*a) / (2*(N-a));
-                c = N - a - b;
-                if (a < b && b < c) ans = max(ans, a * b * c);
-            }
+    int ans = -1;
+    for (int a = 1; a < N; ++a) {
+        int b = 0, c = 0;
+        if (((N-a)*(N-a)-a*a) % (2*(N-a)) == 0) {
+            b = ((N-a)*(N-a)-a*a) / (2*(N-a));
+            c = N - a - b;
+            if (a < b && b < c) ans = max(ans, a * b * c);
         }
-        cout << ans << endl;
     }
+    cout << ans << endl;
 
     return 0;
 }

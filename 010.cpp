@@ -25,7 +25,7 @@ const int oo = (int) 1e9;
 const double PI = 2 * acos(0);
 const double eps = 1e-9;
 
-const int MAX_N = 1000010;
+const int MAX_N = 2000010;
 bool vis[MAX_N];
 int p[MAX_N], cc;
 
@@ -40,18 +40,13 @@ void init() {
 
 int main(void) {
     init();
-    int T;
-    scanf("%d", &T);
-    while (T-- > 0) {
-        int N;
-        scanf("%d", &N);
-        LL ans = 0;
-        for (auto &v: p) {
-            if (v <= N) ans += v;
-            else break;
-        }
-        printf("%lld\n", ans);
+    int N = 2000000;
+    LL ans = 0;
+    for (auto &v: p) {
+        if (v <= N) ans += v;
+        else break;
     }
+    printf("%lld\n", ans);
 
     return 0;
 }

@@ -31,17 +31,11 @@ LL gcd(LL a, LL b) {
 }
 
 int main(void) {
-    int T;
-    scanf("%d", &T);
-    while (T-- > 0) {
-        int N;
-        scanf("%d", &N);
-        LL ans = 1;
-        for (int i = 2; i <= N; ++i) {
-            ans = ans / gcd(ans, i) * i;
-        }
-        printf("%lld\n", ans);
+    LL ans = 1;
+    for (int i = 2; i <= 20; ++i) {
+        ans = ans / gcd(ans, i) * i;
     }
+    printf("%lld\n", ans);
 
     return 0;
 }
